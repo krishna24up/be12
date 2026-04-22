@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 
 const PrivateRoute = ({ children }) => {
   const token = localStorage.getItem("token");
-  return token ? children : <Navigate to="/login" />;
+  return token ? children : <Navigate to="/login" replace />;
 };
 
 function App() {
